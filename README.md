@@ -27,9 +27,3 @@ apenas usando a lógica matemática.
     
 ```
 ![Decimal_Hexadecimal]()
-
-# Bibliotecas e Configurações
-
-### Biblioteca Python Utilizada
-
-### Configurações
