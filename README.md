@@ -12,18 +12,43 @@ apenas usando a lógica matemática.
 # Exemplo de Uso
 ### Classe
 ```
-
+class Conversor:
+    def __init__(self):
+        while True:
+            # Valida a entrada do usuário.
+            try:
+                # Pega o valor Decimal.
+                self.d = int(input('Digite um valor Inteiro Decimal: '))
+                # Chama a função para a conversão.
+                self.Decimal_Binario(self.d)
+                self.Decimal_Hexadecimal(self.d)
+                break
+            except ValueError:
+                print('Erro: Tipo de Dado inválido!\n')
 ```
-![Classe]()
+![Classe](https://github.com/ThiagoLozano/Conversor-Numerico/blob/master/Screenshot/Classe.PNG)
 
 ### Função Decimal para Binário
 ```
-    
+        def Decimal_Binario(decimal):
+        # Cria listas vazias.
+        resto = []
+        quociente = []
+        while True:
+            # Coloca o Resto e o Quociente nas listas correspondentes.
+            quociente.append(decimal // 2)
+            resto.append(int(decimal % 2))
+            decimal = decimal // 2
+            # Pega o último valor do Quociente e coloca na lista de Restos.
+            if decimal < 2:
+                ultimo = len(quociente) - 1
+                resto.append(quociente[ultimo])
+                break
+        # Inverte a lista de trás para frente.
+        resto = resto[::-1]
+        # Retorna o valor Binário.
+        print('\nBinário:', end=' ')
+        for c in resto:
+            print(c, end='')
 ```
-![Decimal_Binario]()
-
-### Função Decimal para Hexadecimal
-```
-    
-```
-![Decimal_Hexadecimal]()
+![Decimal_Binario](https://github.com/ThiagoLozano/Conversor-Numerico/blob/master/Screenshot/Funcao_Binario.PNG)
