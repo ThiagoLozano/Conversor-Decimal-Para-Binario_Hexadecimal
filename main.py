@@ -35,7 +35,29 @@ class Conversor:
 
     @staticmethod
     def Decimal_Hexadecimal(decimal):
-        pass
+        tabela_hex = {'A': 10,
+                      'B': 11,
+                      'C': 12,
+                      'D': 13,
+                      'E': 14,
+                      'F': 15}
+        # Cria listas vazias.
+        resto = []
+        quociente = []
+        while True:
+            # Coloca o Resto e o Quociente nas listas correspondentes.
+            quociente.append(int(decimal / 16))
+            resto.append(int(decimal % 16))
+            decimal = decimal / 16
+            # Pega o último valor do Quociente e coloca na lista de Restos.
+            if decimal < 16:
+                ultimo = len(quociente) - 1
+                resto.append(quociente[ultimo])
+                break
+        # Inverte a lista de trás para frente.
+        resto = resto[::-1]
+        print('\nHexadecimal:')
+        print(resto)
 
 
 usuario = Conversor()
