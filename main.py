@@ -7,6 +7,7 @@ class Conversor:
                 self.d = int(input('Digite um valor Inteiro Decimal: '))
                 # Chama a função para a conversão.
                 self.Decimal_Binario(self.d)
+                self.Decimal_Hexadecimal(self.d)
                 break
             except ValueError:
                 print('Erro: Tipo de Dado inválido!\n')
@@ -28,8 +29,13 @@ class Conversor:
                 break
         # Inverte a lista de trás para frente.
         resto = resto[::-1]
+        print('\nBinário:', end=' ')
         for c in resto:
             print(c, end='')
+
+    @staticmethod
+    def Decimal_Hexadecimal(decimal):
+        pass
 
 
 usuario = Conversor()
