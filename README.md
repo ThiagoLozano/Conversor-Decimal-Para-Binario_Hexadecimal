@@ -1,4 +1,4 @@
-# PROJETO PYTHON: Conversão Numérica
+# PROJETO PYTHON: Conversor Decimal para Binário & Hexadecimal
 
 > Um programa que retorna as conversões de Decimal para Binário e Hexadecimal.
 
